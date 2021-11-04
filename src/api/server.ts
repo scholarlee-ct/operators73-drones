@@ -27,6 +27,7 @@ export const server_calls = {
         if (!response.ok){
             throw new Error('Failed to create your drone...')
         }
+        console.log('response from api', response)
         return await response.json()
     },
     update: async (id:string, data: any = {}) => {
